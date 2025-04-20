@@ -1,0 +1,96 @@
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 90%;
+  width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.controls {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+.anime-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: fixed; /* Fixed position */
+  top: 20px; /* Adjust as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.fixed-image {
+  width: 350px; /* Fixed size */
+  height: 500px; /* Fixed size */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fixed-image:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  margin-top: 10px;
+  text-align: justify;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.description.show {
+  opacity: 1;
+  max-height: 500px;
+}
